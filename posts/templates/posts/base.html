@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+     <meta charset="UTF-8">
+    <title>InfoCalen -商品情報サイト-</title>
+
+    <body>
+<!-- 下記で色を変更可能 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--以下ヘッダ-->
+    {% load static %}
+    <!--<a href="index.html"><img src="{{ post.image.url}}" class="img-fluid rounded" style="max-height: 200px;" alt="TAG index" border="0"></a>-->
+  <a class="navbar-brand" href="index.html">InfoCalen(仮)</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!--検索フォーム-->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="商品検索" aria-label="Search" action="" method="GET">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="商品検索" aria-label="Search" action="" method="GET">-->
+      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+    </form>
+    <!--カテゴリリンク集-->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">カレンダー <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ゲーム</a>
+      </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="#">ホビー</a>
+      </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="#">音楽</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">家電</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+<!--以上ヘッダ-->
+<div class="container">
+    {% block content %}
+    {% endblock %}
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</div>
+</body>
+
+</head>
+</html>

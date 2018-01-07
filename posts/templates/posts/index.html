@@ -1,0 +1,29 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+<h1 class="text-center">ようこそ、ほげほげほげ!</h1>
+
+{% load static %}
+
+<img src="{% static 'posts/home.jpg' %}" class="img-fluid rounded" style="max-height: 200px;"/>
+<h3>最新の投稿</h3>
+
+    <form action="" method="GET">
+        <p><label>検索テキスト：<input type="search" name="search" size="30" maxlength="255"></label></p>
+
+    <button type="submit">検索</button>
+    </form>
+
+{% for post in posts.all %}
+    <!--<a href = "post_search">{{ post.title }}</a>-->
+    <a href = "{% url 'post_detail' post.id %}">{{ post.title }}</a>
+
+    <br/><br/>
+    {{ post.summary}}
+    <br/><br/>
+    <img src="{{ post.image.url}}" class="img-fluid rounded" style="max-height: 200px; "/>
+    <br/>
+
+
+
+{% endfor %}
+{% endblock %}}
